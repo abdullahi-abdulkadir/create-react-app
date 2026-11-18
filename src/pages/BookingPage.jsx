@@ -1,10 +1,14 @@
-function BookingPage() {
+import BookingForm from "../components/BookingForm";
+
+export default function BookingPage({ availableTimes, dispatch, submitForm }) {
   return (
-    <div className="booking-page">
+    <>
       <h1>Reserve a Table</h1>
-      <p>Table reservation form goes here.</p>
-    </div>
+      <BookingForm
+        availableTimes={availableTimes}
+        dispatch={dispatch}
+        submitForm={submitForm}
+      />
+    </>
   );
 }
-
-export default BookingPage;
